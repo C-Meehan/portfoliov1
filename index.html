@@ -17,7 +17,7 @@
             <a href="#about"><i class="fa-solid fa-user" style="color: #fcfcfd;"></i> About Me</a>
             <a href="#project">Projects</a>
             <a href="#education">Education</a>
-            <a href="#"><i class="fa-regular fa-envelope"></i> Contact Me!</a>
+            <a href="#"><i class="fa-regular fa-envelope"></i> Contact Me</a>
             <a href="./assets/Christopher.Meehan.Resume (2).pdf" target="_blank"><i class="fa-solid fa-file-pdf"></i>
                 Resume</a>
             <!-- <i class="fa-regular fa-envelope"></i> -->
@@ -100,57 +100,143 @@
                                     alt="create candy">
                             </div> -->
                             <!-- Slideshow container -->
-                            <div class="slideshow-container">
-
-                                <!-- Full-width images with number and caption text -->
-                                <div class="mySlides fade">
-                                    <div class="numbertext">1 / 4</div>
-                                    <img src="./assets/project_screenshots/Screenshot 2023-06-26 122751.png" style="width:100%">
-                                </div>
-
-                                <div class="mySlides fade">
-                                    <div class="numbertext">2 / 4</div>
-                                    <img src="./assets/project_screenshots/Screenshot 2023-06-26 122855.png" style="width:100%">
-                                </div>
-
-                                <div class="mySlides fade">
-                                    <div class="numbertext">3 / 4</div>
-                                    <img src="./assets/project_screenshots/Screenshot 2023-06-26 123039.png" style="width:100%">
-                                </div>
-
-                                <div class="mySlides fade">
-                                    <div class="numbertext">4 / 4</div>
-                                    <img src="./assets/project_screenshots/Screenshot 2023-06-26 123048.png" style="width:100%">
-                                </div>
+                            <div class="carousel" data-carousel>
+                                <button class="carousel-button prev" data-carousel-button="prev">&#8656;</button>
+                                <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
+                                <ul data-slides>
+                                    <li class="slide fade" data-active>
+                                        <!-- <div class="numbertext">1 / 4</div> -->
+                                        <img src="./assets/project_screenshots/CandyShop/Screenshot 2023-06-26 122751.png" >
+                                    </li>
+    
+                                    <li class="slide fade">
+                                        <!-- <div class="numbertext">2 / 4</div> -->
+                                        <img src="./assets/project_screenshots/CandyShop/Screenshot 2023-06-26 122855.png" >
+                                    </li>
+    
+                                    <li class="slide fade">
+                                        <!-- <div class="numbertext">3 / 4</div> -->
+                                        <img src="./assets/project_screenshots/CandyShop/Screenshot 2023-06-26 123039.png" >
+                                    </li>
+    
+                                    <li class="slide fade">
+                                        <!-- <div class="numbertext">4 / 4</div> -->
+                                        <img src="./assets/project_screenshots/CandyShop/Screenshot 2023-06-26 123048.png" >
+                                    </li>
+                                </ul>
 
                                 <!-- Next and previous buttons -->
-                                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                                <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                                <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
                             </div>
                             <br>
                         </div>
                     </div>
                     <div class="project-card">
                         <h2 class="project-name">Venue <span class="color-highlight2">Review</span></h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quas possimus, dolor
-                            perspiciatis consectetur dolores iste vitae provident fugit velit molestiae, quisquam
-                            nesciunt? Asperiores blanditiis eos voluptatum aspernatur fuga omnis.</p>
+                        <div class="project-content">
+                            <div class="project-description">
+                                <p>Venue Review is a stadium review website where users can create an account and review baseball stadiums they've visited. Curious how the food is at Citi Field? Wonder if you should sit in the outfield or behind home plate? With Venue Review you can check out the reviews from prior fans and leave your worries at home. Ratings are given on a 1-5 scale at .5 increments, and you can also leave a short-form review as well. Venue Review utilizes <span
+                                        class="color-highlight">React</span> with a <span
+                                        class="color-highlight">MongoDB Atlas</span> database. <a href="https://github.com/C-Meehan/VenueReview"
+                                        target="_blank"><i class="fa-brands fa-github" style="color: #ff5f1f;"></i></a>
+                                </p>
+                                <ul class="tech-used">
+                                    <h3><span class="color-highlight2">Technologies</span> used:</h3>
+                                    <li>- React <i class="fa-brands fa-react" style="color: #61dbfb;"></i></li>
+                                    <li>- MongoDB <img width="24" height="24"
+                                            src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/24/external-mongodb-a-cross-platform-document-oriented-database-program-logo-color-tal-revivo.png"
+                                            alt="external-mongodb-a-cross-platform-document-oriented-database-program-logo-color-tal-revivo" />
+                                    </li>
+                                    <li>- HTML <i class="fa-brands fa-html5" style="color: #e96228;"></i></li>
+                                    <!-- <li>- CSS <i class="fa-brands fa-css3-alt" style="color: #2862e9;"></i></li> -->
+                                    <li>- MaterialUI</li>
+                                </ul>
+                            </div>
+                            <!-- <div class="project-screenshots">
+                                <img src="./assets/project_screenshots/Screenshot 2023-06-26 122751.png"
+                                    alt="shop candy page">
+                                <img src="./assets/project_screenshots/Screenshot 2023-06-26 122855.png"
+                                    alt="user cart">
+                                <img src="./assets/project_screenshots/Screenshot 2023-06-26 123039.png"
+                                    alt="admin dashboard">
+                                <img src="./assets/project_screenshots/Screenshot 2023-06-26 123048.png"
+                                    alt="create candy">
+                            </div> -->
+                            <!-- Slideshow container -->
+                            <div class="carousel" data-carousel>
+                                <button class="carousel-button prev" data-carousel-button="prev">&#8656;</button>
+                                <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
+                                <ul data-slides>
+                                    <li class="slide fade" data-active>
+                                        <!-- <div class="numbertext">1 / 4</div> -->
+                                        <img src="./assets/project_screenshots/VenueReview/Screenshot 2023-07-31 152305.png" >
+                                    </li>
+    
+                                    <li class="slide fade">
+                                        <!-- <div class="numbertext">2 / 4</div> -->
+                                        <img src="./assets/project_screenshots/VenueReview/Screenshot 2023-07-31 124423.png" >
+                                    </li>
+    
+                                    <li class="slide fade">
+                                        <!-- <div class="numbertext">3 / 4</div> -->
+                                        <img src="./assets/project_screenshots/VenueReview/Screenshot 2023-07-31 124443.png" >
+                                    </li>
+    
+                                    <li class="slide fade">
+                                        <!-- <div class="numbertext">4 / 4</div> -->
+                                        <img src="./assets/project_screenshots/VenueReview/Screenshot 2023-07-31 124456.png" >
+                                    </li>
+
+                                    <li class="slide fade">
+                                        <!-- <div class="numbertext">4 / 4</div> -->
+                                        <img src="./assets/project_screenshots/VenueReview/Screenshot 2023-07-31 124741.png" >
+                                    </li>
+                                </ul>
+
+                                <!-- Next and previous buttons -->
+                                <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                                <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+                            </div>
+                            <br>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
         <section id="education">
+            <h2 class="section-title">
+                < Educ<span class="color-highlight">a</span>tion >
+            </h2>
             <div class="education-experience">
-                <h2>University of Florida</h2>
+                <div class="school-card">
+                    <h2 class="school-name">University of <span class="color-highlight2">Florida</span></h2>
+                    <ul>
+                        <li>2011 - 2013</li>
+                        <li>Bachelor of Arts with a major in Criminology</li>
+                        <li>GPA: 3.7</li>
+                        <li>Board member of Criminology and Law Honor Society</li>
+                    </ul>
+                </div>
+                <div class="school-card">
+                    <h2 class="school-name">Coding <span class="color-highlight2">Dojo</span></h2>
+                    <ul>
+                        <li>2022 - 2023</li>
+                        <li>Immersive full-stack software development bootcamp</li>
+                        <li>Languages learned included: Python, Java, JavaScript</li>
+                    </ul>
+                </div>
             </div>
         </section>
     </div>
-    <script>var typed = new Typed(".typing", {
+    <script>
+        var typed = new Typed(".typing", {
             strings: ["Web Developer", "Mentor", "Open Source Contributor", "Action on Google Developer", "Freelancer", "AI Enthusiast", "Front End Enthusiast", "UI Designer", "Photographer", "Technical Writer", "Author", "Cloud Computing Enthusiast"],
             typeSpeed: 100,
             backSpeed: 60,
             loop: true
-        });</script>
+        });
+    </script>
 </body>
 <script src="script.js"></script>
 
