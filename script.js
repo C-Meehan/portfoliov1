@@ -36,16 +36,17 @@ function contact(event) {
   event.preventDefault();
   const loading = document.querySelector('.modal__overlay--loading')
   const success = document.querySelector('.modal__overlay--success')
-  loading.classList += " modal__overlay--visible"
-  emailjs
-    .sendForm(
-      'service_bqx4s2d',
-      'template_74y021e',
-      event.target,
-      'K186n3klexni0hH1l'
-    ).then(() => {
+  loading.classList.add(" modal__overlay--visible")
+  // emailjs
+  //   .sendForm(
+  //     'service_bqx4s2d',
+  //     'template_74y021e',
+  //     event.target,
+  //     'K186n3klexni0hH1l'
+  //   )
+    .then(() => {
       loading.classList.remove("modal__overlay--visible")
-      success.classList += " modal__overlay--visible"
+      success.classList.add(" modal__overlay--visible")
     }).catch(() => {
       loading.classList.remove("modal__overlay--visible")
       alert(
