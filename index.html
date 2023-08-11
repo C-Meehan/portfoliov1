@@ -6,7 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <script src="script.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js%22%3E"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js%22%3E"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("K186n3klexni0hH1l");
+        })();
+    </script>
     <title>Chris' Portfolio</title>
 </head>
 
@@ -17,10 +26,10 @@
             <a href="#about"><i class="fa-solid fa-user" style="color: #fcfcfd;"></i> About Me</a>
             <a href="#project">Projects</a>
             <a href="#education">Education</a>
-            <a href="#"><i class="fa-regular fa-envelope"></i> Contact Me</a>
-            <a href="./assets/Christopher.Meehan.Resume (2).pdf" target="_blank"><i class="fa-solid fa-file-pdf"></i>
-                Resume</a>
-            <!-- <i class="fa-regular fa-envelope"></i> -->
+            <!-- <a href="#contact-form" id="contact-link" onclick="toggelModal()"><i class="fa-regular fa-envelope"></i>
+                Contact Me</a> -->
+            <a onclick="toggleModal()"><i class="fa-regular fa-envelope"></i> Contact Me</a>
+            <a href="./assets/Christopher.Meehan.Resume (2).pdf" target="_blank"><i class="fa-solid fa-file-pdf"></i>Resume</a>
         </div>
     </nav>
     <div class="color-splash"></div>
@@ -34,6 +43,118 @@
                 <img class="jang" src="./assets/Untitled_Artwork.GIF" alt="coding-gif">
             </div>
         </div>
+        <div class="modal">
+
+            <div class="modal__half modal__about">
+                <h2 class="modal__title model__title--about">Full-stack software engineer</h2>
+                <h3 class="modal__sub-title model__sub-title--about">Technologies I'm familiar with include:</h3>
+                <!-- <p class="modal__para">
+                    I'm a 20 year-old <span class="orange bolded">Full-stack software engineer </span> from California
+                    with a strong passion for
+                    developing websites with great <span class="orange bolded"> user experience.</span>
+                    <br>
+                    I currently work on difficult engineering problems and learn from a team consisting of some of the
+                    most
+                    talented and experienced software engineers every day.
+                </p> -->
+                <div class="modal__languages">
+                    <figure class="modal__language">
+                        <img class="modal__language--img"
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
+                            alt="">
+                        <span class="language__name">HTML</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img"
+                            src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png" alt="">
+                        <span class="language__name">Css</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img"
+                            src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png" alt="">
+                        <span class="language__name">JavaScript</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="./assets/tech_logos/reactLogo.png" alt="">
+                        <span class="language__name">React</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="./assets/tech_logos/javaLogo.png" alt="">
+                        <span class="language__name">Java</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="./assets/tech_logos/pythonLogo.png" alt="">
+                        <span class="language__name">Python</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img flask" src="./assets/tech_logos/flask.png" alt="">
+                        <span class="language__name">Flask</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img flask" src="./assets/tech_logos/mySQlLogo.png" alt="">
+                        <span class="language__name">MySQL</span>
+                    </figure>
+                </div>
+            </div>
+            <div class="modal__half modal__contact">
+
+                <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
+
+                <h3 class="modal__title modal__title--contact">Let's have a chat!</h3>
+                <h3 class="modal__sub-title modal__sub-title-contact">I am currently open to new opportunities</h3>
+                <form action="https://formsubmit.co/chrismeehan91@gmail.com" method="POST" id="contact__form" >
+                    <!-- onsubmit="contact(event)" -->
+                    <div class="form__item">
+                        <label class="for__item--label">Name</label>
+                        <input class="input" name="user_name" type="text" required> </input>
+                    </div>
+                    <div class="form__item">
+                        <label class="for__item--label">Email</label>
+                        <input class="input" name="user_email" type="text" required> </input>
+                    </div>
+                    <div class="form__item">
+                        <label class="for__item--label">Number</label>
+                        <input class="input" name="user_number" type="text"> </input>
+                    </div>
+                    <div class="form__item">
+                        <label class="for__item--label">Message</label>
+                        <textarea class="input" name="message" type="text" required> </textarea>
+                    </div>
+                    <button id="contact__submit" class="form__submit">
+                        Send it my way
+                    </button>
+                </form>
+                <div class="modal__overlay modal__overlay--loading ">
+                    <i class="fas fa-spinner"></i>
+                </div>
+                <div class="modal__overlay modal__overlay--success">
+                    Thanks for the message! I'm looking forward to speaking with you soon!
+                </div>
+            </div>
+        </div>
+
+        <!-- <section id="contact-form">
+            <div class="form-container">
+                <button class="close-button" onclick="closeContactForm()">&times;</button>
+                <h2>Contact Me</h2>
+                <form>
+                    <label for="name">Name: <span class="required">(required)</span></label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email Address: <span class="required">(required)</span></label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="number">Phone Number:</label>
+                    <input type="tel" id="number" name="number">
+
+                    <label for="message">Message: <span class="required">(required)</span></label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </section> -->
+
         <section id="about">
             <div class="wave">
                 <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
@@ -75,8 +196,8 @@
                                     classmate. Within this application a visitor to the site can browse a curated list
                                     of candy, filter through different categories and add items to their cart. I also
                                     created a secure administration login that allows the admin to add and alter
-                                    products for the website. <a href="https://github.com/C-Meehan/candy_shop"
-                                        target="_blank"><i class="fa-brands fa-github" style="color: #ff5f1f;"></i></a>
+                                    products for the website. <span class="color-highlight2">Github</span> <a href="https://github.com/C-Meehan/candy_shop"
+                                        target="_blank"><i class="fa-brands fa-github" style="color: #ff5f1f;"></i></a> <a href="http://3.87.191.113/" target="_blank" class="color-highlight2 demo-link">Live Demo</a>
                                 </p>
                                 <ul class="tech-used">
                                     <h3><span class="color-highlight2">Technologies</span> used:</h3>
@@ -106,22 +227,26 @@
                                 <ul data-slides>
                                     <li class="slide fade" data-active>
                                         <!-- <div class="numbertext">1 / 4</div> -->
-                                        <img src="./assets/project_screenshots/CandyShop/Screenshot 2023-06-26 122751.png" >
+                                        <img
+                                            src="./assets/project_screenshots/CandyShop/Screenshot 2023-06-26 122751.png">
                                     </li>
-    
+
                                     <li class="slide fade">
                                         <!-- <div class="numbertext">2 / 4</div> -->
-                                        <img src="./assets/project_screenshots/CandyShop/Screenshot 2023-06-26 122855.png" >
+                                        <img
+                                            src="./assets/project_screenshots/CandyShop/Screenshot 2023-06-26 122855.png">
                                     </li>
-    
+
                                     <li class="slide fade">
                                         <!-- <div class="numbertext">3 / 4</div> -->
-                                        <img src="./assets/project_screenshots/CandyShop/Screenshot 2023-06-26 123039.png" >
+                                        <img
+                                            src="./assets/project_screenshots/CandyShop/Screenshot 2023-06-26 123039.png">
                                     </li>
-    
+
                                     <li class="slide fade">
                                         <!-- <div class="numbertext">4 / 4</div> -->
-                                        <img src="./assets/project_screenshots/CandyShop/Screenshot 2023-06-26 123048.png" >
+                                        <img
+                                            src="./assets/project_screenshots/CandyShop/Screenshot 2023-06-26 123048.png">
                                     </li>
                                 </ul>
 
@@ -136,10 +261,15 @@
                         <h2 class="project-name">Venue <span class="color-highlight2">Review</span></h2>
                         <div class="project-content">
                             <div class="project-description">
-                                <p>Venue Review is a stadium review website where users can create an account and review baseball stadiums they've visited. Curious how the food is at Citi Field? Wonder if you should sit in the outfield or behind home plate? With Venue Review you can check out the reviews from prior fans and leave your worries at home. Ratings are given on a 1-5 scale at .5 increments, and you can also leave a short-form review as well. Venue Review utilizes <span
-                                        class="color-highlight">React</span> with a <span
-                                        class="color-highlight">MongoDB Atlas</span> database. <a href="https://github.com/C-Meehan/VenueReview"
-                                        target="_blank"><i class="fa-brands fa-github" style="color: #ff5f1f;"></i></a>
+                                <p>Venue Review is a stadium review website where users can create an account and review
+                                    baseball stadiums they've visited. Curious how the food is at Citi Field? Wonder if
+                                    you should sit in the outfield or behind home plate? With Venue Review you can check
+                                    out the reviews from prior fans and leave your worries at home. Ratings are given on
+                                    a 1-5 scale at .5 increments, and you can also leave a short-form review as well.
+                                    Venue Review utilizes <span class="color-highlight">React</span> with a <span
+                                        class="color-highlight">MongoDB Atlas</span> database. <span class="color-highlight2">Github</span> <a
+                                        href="https://github.com/C-Meehan/VenueReview" target="_blank"><i
+                                            class="fa-brands fa-github" style="color: #ff5f1f;"></i></a> <a href="http://18.204.215.140/" target="_blank" class="color-highlight2 demo-link">Live Demo</a>
                                 </p>
                                 <ul class="tech-used">
                                     <h3><span class="color-highlight2">Technologies</span> used:</h3>
@@ -170,27 +300,32 @@
                                 <ul data-slides>
                                     <li class="slide fade" data-active>
                                         <!-- <div class="numbertext">1 / 4</div> -->
-                                        <img src="./assets/project_screenshots/VenueReview/Screenshot 2023-07-31 152305.png" >
+                                        <img
+                                            src="./assets/project_screenshots/VenueReview/Screenshot 2023-07-31 152305.png">
                                     </li>
-    
+
                                     <li class="slide fade">
                                         <!-- <div class="numbertext">2 / 4</div> -->
-                                        <img src="./assets/project_screenshots/VenueReview/Screenshot 2023-07-31 124423.png" >
+                                        <img
+                                            src="./assets/project_screenshots/VenueReview/Screenshot 2023-07-31 124423.png">
                                     </li>
-    
+
                                     <li class="slide fade">
                                         <!-- <div class="numbertext">3 / 4</div> -->
-                                        <img src="./assets/project_screenshots/VenueReview/Screenshot 2023-07-31 124443.png" >
-                                    </li>
-    
-                                    <li class="slide fade">
-                                        <!-- <div class="numbertext">4 / 4</div> -->
-                                        <img src="./assets/project_screenshots/VenueReview/Screenshot 2023-07-31 124456.png" >
+                                        <img
+                                            src="./assets/project_screenshots/VenueReview/Screenshot 2023-07-31 124443.png">
                                     </li>
 
                                     <li class="slide fade">
                                         <!-- <div class="numbertext">4 / 4</div> -->
-                                        <img src="./assets/project_screenshots/VenueReview/Screenshot 2023-07-31 124741.png" >
+                                        <img
+                                            src="./assets/project_screenshots/VenueReview/Screenshot 2023-07-31 124456.png">
+                                    </li>
+
+                                    <li class="slide fade">
+                                        <!-- <div class="numbertext">4 / 4</div> -->
+                                        <img
+                                            src="./assets/project_screenshots/VenueReview/Screenshot 2023-07-31 124741.png">
                                     </li>
                                 </ul>
 
@@ -210,6 +345,7 @@
             </h2>
             <div class="education-experience">
                 <div class="school-card">
+                    <img class="schoollogo" src="./assets/Florida_Gators_gator_logo.svg.png" alt="uf gator head logo">
                     <h2 class="school-name">University of <span class="color-highlight2">Florida</span></h2>
                     <ul>
                         <li>2011 - 2013</li>
@@ -219,6 +355,7 @@
                     </ul>
                 </div>
                 <div class="school-card">
+                    <img class="schoollogo" src="./assets/CodingDojoLogo.png" alt="coding dojo logo">
                     <h2 class="school-name">Coding <span class="color-highlight2">Dojo</span></h2>
                     <ul>
                         <li>2022 - 2023</li>
@@ -231,13 +368,13 @@
     </div>
     <script>
         var typed = new Typed(".typing", {
-            strings: ["Web Developer", "Mentor", "Open Source Contributor", "Action on Google Developer", "Freelancer", "AI Enthusiast", "Front End Enthusiast", "UI Designer", "Photographer", "Technical Writer", "Author", "Cloud Computing Enthusiast"],
+            strings: ["Web Developer", "Mentor", "Full Stack Developer", "Freelancer", "Problem Solver", "Front End Enthusiast"],
             typeSpeed: 100,
             backSpeed: 60,
             loop: true
         });
     </script>
 </body>
-<script src="script.js"></script>
+<!-- <script src="script.js"></script> -->
 
 </html>

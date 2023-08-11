@@ -1,60 +1,4 @@
-// // $(window).scroll(function () {
-// //     // 100 = The point you would like to fade the nav in.
-
-// //     if ($(window).scrollTop() > 100) {
-
-// //         $('.navbar').addClass('show');
-
-// //     } else {
-
-// //         $('.navbar').removeClass('show');
-
-// //     };
-// // });
-// // var typed = new Typed(".typing", {
-// //     strings: ["Web Developer", "Mentor", "Open Source Contributor", "Action on Google Developer", "Freelancer", "AI Enthusiast", "Front End Enthusiast", "UI Designer", "Photographer", "Technical Writer", "Author", "Cloud Computing Enthusiast"],
-// //     typeSpeed: 100,
-// //     backSpeed: 60,
-// //     loop: true
-// // });
-
-// let slideIndex = [1,1];
-// let slideId = ["mySlides1", "mySlides2"]
-// showSlides(1,0);
-// showSlides(1,1);
-
-// // Next/previous controls
-// function plusSlides(n, no) {
-//   showSlides(slideIndex[no] += n, no);
-// }
-
-// // Thumbnail image controls
-// function currentSlide(n) {
-//   showSlides(slideIndex = n);
-// }
-
-// function showSlides(n, no) {
-//   let i;
-//   let x = document.getElementsByClassName(slideId[no]);
-//   // let slides = document.getElementsByClassName("mySlides");
-//   let dots = document.getElementsByClassName("dot");
-//   if (n > x.length) {slideIndex[no] = 1}
-//   if (n < 1) {slideIndex[no] = x.length}
-//   for (i = 0; i < x.length; i++) {
-//     x[i].style.display = "none";
-//   }
-//   x[slideIndex[no]-1].style.display = "block";
-//   // if (n > slides.length) {slideIndex = 1}
-//   // if (n < 1) {slideIndex = slides.length}
-//   // for (i = 0; i < slides.length; i++) {
-//   //   slides[i].style.display = "none";
-//   // }
-//   for (i = 0; i < dots.length; i++) {
-//     dots[i].className = dots[i].className.replace(" active", "");
-//   }
-//   // slides[slideIndex-1].style.display = "block";
-//   dots[slideIndex-1].className += " active";
-// }
+let isModalOpen = false
 
 const buttons = document.querySelectorAll("[data-carousel-button]")
 
@@ -74,3 +18,51 @@ buttons.forEach(button => {
     delete activeSlide.dataset.active
   })
 })
+
+// document.getElementById("contact-link").addEventListener("click", showContactForm)
+
+// function showContactForm() {
+//   const form = document.getElementById("contact-form");
+//   form.classList.add("show")
+//   console.log("Function called")
+// }
+
+// function closeContactForm() {
+//   const form = document.getElementById("contact-form");
+//   form.classList.remove("show")
+// }
+
+function contact(event) {
+  event.preventDefault();
+  const loading = document.querySelector('.modal__overlay--loading')
+  const success = document.querySelector('.modal__overlay--success')
+  loading.classList += " modal__overlay--visible"
+  emailjs
+    .sendForm(
+      'service_bqx4s2d',
+      'template_74y021e',
+      event.target,
+      'K186n3klexni0hH1l'
+    ).then(() => {
+      loading.classList.remove("modal__overlay--visible")
+      success.classList += " modal__overlay--visible"
+    }).catch(() => {
+      loading.classList.remove("modal__overlay--visible")
+      alert(
+        "The email service is temporarily unavailable. Please directly contact me on chrismeehan91@gmail.com"
+      )
+    })
+}
+
+function toggleModal() {
+  if (isModalOpen) {
+    isModalOpen = false
+    return document.body.classList.remove('modal--open')
+
+  }
+  isModalOpen = true
+  document.body.classList += " modal--open"
+}
+
+
+// service_s13lxyz
