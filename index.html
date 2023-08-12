@@ -26,11 +26,26 @@
             <a onclick="scrollToSection('about-section')"><i class="fa-solid fa-user" style="color: #fcfcfd;"></i> About Me</a>
             <a onclick="scrollToSection('project-section')">Projects</a>
             <a onclick="scrollToSection('education-section')">Education</a>
-            <!-- <a href="#contact-form" id="contact-link" onclick="toggelModal()"><i class="fa-regular fa-envelope"></i>
-                Contact Me</a> -->
             <a onclick="toggleModal()"><i class="fa-regular fa-envelope"></i> Contact Me</a>
             <a href="./assets/Christopher.Meehan.Resume (2).pdf" target="_blank"><i class="fa-solid fa-file-pdf"></i>Resume</a>
         </div>
+
+        <button class="btn__menu" onclick="openMenu()">
+            <i class="fas fa-bars"></i>
+        </button>
+            <div class="menu__backdrop">
+                <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+                    <i class="fas fa-times"></i>
+                </button>
+                <ul class="menu__links">
+                    <li class="menu__list"><a class="menu__link" onclick="scrollToSection('about-section')">About Me</a></li>
+                    <li class="menu__list"><a class="menu__link" onclick="scrollToSection('project-section')">Projects</a></li>
+                    <li class="menu__list"><a class="menu__link" onclick="scrollToSection('education-section')">Education</a></li>
+                    <li class="menu__list"><a class="menu__link" onclick="toggleModal()">Contact Me</a></li>
+                    <li class="menu__list"><a class="menu__link" href="./assets/Christopher.Meehan.Resume (2).pdf" target="_blank">Resume</a></li>
+                </ul>
+            </div>
+
     </nav>
     <div class="color-splash"></div>
     <div class="main-container">
@@ -374,6 +389,9 @@
                 </div>
             </div>
         </section>
+        <footer>
+            <p>Copyright © 2023 Christopher Meehan</p>
+        </footer>
     </div>
     <script>
         var typed = new Typed(".typing", {
