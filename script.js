@@ -1,4 +1,5 @@
 let isModalOpen = false
+let isModalOpenSuccess = true
 
 const buttons = document.querySelectorAll("[data-carousel-button]")
 
@@ -66,13 +67,13 @@ function toggleModal() {
 }
 
 function toggleModalSuccess() {
-  if (isModalOpen) {
-    isModalOpen = false
-    return document.body.classList.remove('modal--open')
+  if (isModalOpenSuccess) {
+    isModalOpenSuccess = true
+    return document.body.classList += " modal--open"
 
   }
-  isModalOpen = true
-  document.body.classList += " modal--open"
+  isModalOpenSuccess = false
+  document.body.classList.remove('modal--open')
 }
 
 // toggleModalSuccess();
