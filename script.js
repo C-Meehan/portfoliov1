@@ -75,6 +75,6 @@ function toggleModalSuccess() {
   document.body.classList += " modal--open"
 }
 
-toggleModalSuccess();
+// toggleModalSuccess();
 
 // service_s13lxyz
