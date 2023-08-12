@@ -23,9 +23,9 @@
     <nav class="navbar transition">
         <div class="nav-name">Christopher <span>Meehan</span></div>
         <div class="nav-links">
-            <a href="#about"><i class="fa-solid fa-user" style="color: #fcfcfd;"></i> About Me</a>
-            <a href="#project">Projects</a>
-            <a href="#education">Education</a>
+            <a onclick="scrollToSection('about-section')"><i class="fa-solid fa-user" style="color: #fcfcfd;"></i> About Me</a>
+            <a onclick="scrollToSection('project-section')">Projects</a>
+            <a onclick="scrollToSection('education-section')">Education</a>
             <!-- <a href="#contact-form" id="contact-link" onclick="toggelModal()"><i class="fa-regular fa-envelope"></i>
                 Contact Me</a> -->
             <a onclick="toggleModal()"><i class="fa-regular fa-envelope"></i> Contact Me</a>
@@ -164,7 +164,7 @@
             </div>
         </section> -->
 
-        <section id="about">
+        <section class="about-section">
             <div class="wave">
                 <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
                     preserveAspectRatio="none">
@@ -187,7 +187,7 @@
                 </div>
             </div>
         </section>
-        <section id="project">
+        <section class="project-section">
             <div class="projects">
                 <h2 class="section-title">
                     < Proj<span class="color-highlight">e</span>cts >
@@ -348,7 +348,7 @@
                 </div>
             </div>
         </section>
-        <section id="education">
+        <section class="education-section">
             <h2 class="section-title">
                 < Educ<span class="color-highlight">a</span>tion >
             </h2>

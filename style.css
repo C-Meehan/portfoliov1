@@ -729,7 +729,7 @@ section {
 /*End of Projects*/
 
 /*Start of Education and experience*/
-#education .section-title {
+.education-section .section-title {
     text-align: center;
 }
 
