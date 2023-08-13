@@ -51,6 +51,14 @@ body {
     color: cyan;
 }
 
+.initials {
+    display: none;
+}
+
+.initials span {
+
+}
+
 .nav-links {
     display: flex;
     width: 100%;
@@ -812,6 +820,84 @@ footer {
     fill: #FF5F1F;
 }
 
+
+/* ALL MEDIA QUERIES BELOW */
+
+
+
+@media(max-width: 1550px) {
+    .color-splash {
+        transition: 300ms ease-in-out;
+        width: 800px;
+        height: 650px;
+    }
+
+    .about-photo {
+        width: 70%;
+        transition: 200ms ease-in;
+    }
+}
+
+@media(max-width: 1300px) {
+    .color-splash {
+        transition: 300ms ease-in-out;
+        width: 700px;
+        height: 600px;
+    }
+
+    .about-photo {
+        width: 80%;
+        transition: 200ms ease-in;
+    }
+
+    .project-content {
+        flex-direction: column;
+        justify-content: space-evenly;
+        /* transition: 1000ms ease-in; */
+        /* vertical-align: top; */
+    }
+
+    .project-description {
+        width: 100%;
+        /* text-align: start; */
+        line-height: 160%;
+        font-size: 1.4rem;
+    }
+
+    .carousel {
+        /* max-width: 45%; */
+        width: 100%;
+        height: 50vh;
+        position: relative;
+        
+    }
+}
+
+@media(max-width: 1120px) {
+    .color-splash {
+        transition: 300ms ease-in-out;
+        width: 600px;
+        height: 525px;
+    }
+
+    .intro h1 {
+        font-size: 5rem;
+        margin-bottom: 20px;
+    }
+    
+    .intro h2 {
+        font-size: 3.5rem;
+    }
+
+    .carousel {
+        /* max-width: 45%; */
+        width: 100%;
+        height: 40vh;
+        position: relative;
+        
+    }
+}
+
 @media(max-width: 1015px) {
     .nav-links {
         display: none;
@@ -827,4 +913,209 @@ footer {
         justify-content: space-between;
     }
 
+}
+
+@media(max-width: 921px) {
+    .color-splash {
+        transition: 300ms ease-in-out;
+        width: 540px;
+        height: 440px;
+    }
+
+    .intro h1 {
+        font-size: 4.5rem;
+        margin-bottom: 20px;
+    }
+    
+    .intro h2 {
+        font-size: 3rem;
+    }
+
+    .wave svg{
+        /* display: none; */
+        height: 150px;
+    }
+
+    .about-me {
+        flex-direction: column-reverse;
+    }
+
+    .about-left {
+        width: 80%;
+        font-size: 1rem;
+        margin: 0 auto;
+        margin-bottom: 50px;
+        padding: 40px;
+        background-color: #0f2561;
+        box-shadow: 4px 4px 16px black;
+        border-radius: 16px;
+        text-align: center;
+    }
+
+    .about-left p {
+        transition: 200ms ease-in;
+        font-size: 1.5rem;
+        line-height: 200%;
+    }
+
+    .about-right {
+        margin-bottom: 20px;
+    }
+
+    .project-description {
+        transition: 500ms ease-in;
+        font-size: 1.5rem;
+    }
+
+    .tech-used {
+        transition: 500ms ease-in;
+        font-size: 1rem;
+    }
+
+    .carousel {
+        /* max-width: 45%; */
+        width: 100%;
+        height: 30vh;
+        position: relative;
+        
+    }
+
+    .education-experience {
+        flex-direction: column;
+    }
+
+    .school-card {
+        width: 80%;
+    }
+
+    .school-card li {
+        list-style: square;
+    }
+}
+
+@media(max-width: 803px) {
+    .color-splash {
+        display: none;
+    }
+
+    .jang {
+        display: none;
+    }
+
+    .intro-left {
+        width: 80%;
+    }
+
+    .intro-right {
+        width: 0%;
+    }
+
+    .wave svg{
+        /* display: none; */
+        height: 100px;
+    }
+
+    .about-right {
+        width: 50%;
+        padding-bottom: 100px;
+    }
+
+    .tech-used {
+        flex-wrap: wrap;
+    }
+
+    .carousel {
+        /* max-width: 45%; */
+        width: 100%;
+        height: 25vh;
+        position: relative;
+        
+    }
+}
+
+@media(max-width: 675px) {
+    .about-me {
+        padding-top: 75px;
+    }
+
+    .about-right {
+        width: 75%;
+    }
+
+    .about-left p {
+        transition: 200ms ease-in;
+        font-size: 1.5rem;
+        line-height: 160%;
+    }
+}
+
+@media(max-width: 520px) {
+    .nav-name {
+        display: none;
+    }
+
+    .initials {
+        display: block;
+        font-size: 3rem;
+        color: white;
+        font-weight: bold;
+        width: 30%;
+    }
+
+    .initials span {
+        color: cyan;
+    }
+
+    .intro h1 {
+        font-size: 3.5rem;
+        margin-bottom: 20px;
+    }
+    
+    .intro h2 {
+        font-size: 2.25rem;
+    }
+
+    .about-left p {
+        transition: 200ms ease-in;
+        font-size: 1.3rem;
+        line-height: 120%;
+    }
+
+    .project-description {
+        transition: 500ms ease-in;
+        font-size: 1.3rem;
+        line-height: 120%;
+    }
+
+    .carousel {
+        /* max-width: 45%; */
+        width: 100%;
+        height: 15vh;
+        position: relative;
+        
+    }
+}
+
+@media(max-width: 500px) {
+    .project-name {
+        margin-bottom: 30px;
+    }
+
+    .project-description {
+        transition: 300ms ease-in;
+        font-size: 1rem;
+        line-height: 120%;
+    }
+
+    .tech-used {
+        margin: 10px 0px 10px 0px;
+    }
+
+    .carousel {
+        /* max-width: 45%; */
+        padding-top: 10px;
+        width: 100%;
+        height: 12vh;
+        position: relative;
+    }
 }
