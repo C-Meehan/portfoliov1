@@ -1009,6 +1009,11 @@ footer {
 
     .intro-left {
         width: 80%;
+        /* margin-bottom: 40px; */
+    }
+
+    .intro-left h2 {
+        height: 120px;
     }
 
     .intro-right {
