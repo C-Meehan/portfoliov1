@@ -94,7 +94,9 @@ body {
 
 .nav-links a:hover:after {
     width: 100%;
-    background: white;
+    /* background: white; */
+    margin-top: 5px;
+    border-bottom: 2px solid white;
 }
 
 .nav-resume {
@@ -213,14 +215,28 @@ body {
     height: 40px;
     padding: 4px;
     text-transform: uppercase;
+    text-decoration: none;
+}
+
+.menu__link:after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 2px;
+    width: 0px;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease;
+}
+
+.menu__link:hover:after {
+    width: 100%;
+    /* background: white; */
+    margin-top: 5px;
+    border-bottom: 2px solid cyan;
 }
 
 .menu__link-primary {}
 
-.menu__link:hover {
-    /* border-bottom: 1px solid black; */
-    border-bottom: 1px solid cyan;
-}
 
 .menu__link-primary {
     transition: all 300ms ease;
@@ -357,6 +373,7 @@ body {
 
 .input {
     width: 60%;
+    padding: 3px;
 }
 
 .form__submit {
@@ -461,6 +478,14 @@ body {
     color: #fff;
     font-size: 36px;
     z-index: 100;
+    transition-duration: 1.2s;
+    /* transition-property: transform; */
+}
+
+.modal__exit:hover {
+    cursor: pointer;
+    color: cyan;
+    transform: rotate(180deg);
 }
 
 .modal--open nav,
@@ -1072,7 +1097,7 @@ footer {
     }
 
     .modal__contact {
-
+        height: 100%;
     }
 
     .about-me {
@@ -1100,7 +1125,7 @@ footer {
         font-size: 3rem;
         color: white;
         font-weight: bold;
-        width: 30%;
+        width: 25%;
     }
 
     .initials span {
@@ -1169,4 +1194,5 @@ footer {
     .modal__sub-title-contact {
         font-size: 1.2rem;
     }
+
 }
